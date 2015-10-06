@@ -1,4 +1,4 @@
-package com.mauldin.subscribers;
+package subscribers;
 
 public class Subscriber {
     String firstName, lastName, email;

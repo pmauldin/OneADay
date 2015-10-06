@@ -1,12 +1,10 @@
-package com.mauldin;
-
-import com.mauldin.db.Database;
-import com.mauldin.subscribers.Subscriber;
+import db.Database;
+//import subscribers.Subscriber;
 
 public class Main {
 
     public static void main(String[] args) {
-        Subscriber subscriber = new Subscriber("Peter", "Mauldin", "petermauldin@utexas.edu");
+//        Subscriber subscriber = new Subscriber("Peter", "Mauldin", "petermauldin@utexas.edu");
 
 //        subscriber.printSubscriberInfo();
 

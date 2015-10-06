@@ -1,4 +1,4 @@
-package com.mauldin.db;
+package db;
 
 import java.sql.*;
 
@@ -13,7 +13,7 @@ public class Database {
         try {
             Class.forName ("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://" + hostname + "/" + name, username, password);
-            System.out.println ("Database connection established");
+            System.out.print("Database connection established");
         } catch (Exception e) {
             e.printStackTrace();
             return 1;
