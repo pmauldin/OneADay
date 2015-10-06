@@ -1,5 +1,4 @@
 import MySQLdb
-import json
 import itertools
 
 
@@ -16,16 +15,12 @@ class Database(object):
 		self.cur = self.db.cursor()
 		print "Successfully connected to database!"
 
-	def viewSubscribers(self):
-		for row in self.getSubscribers():
-			print row
+	def execute(self, sql):
+		self.cur.execute(sql)
+		return self.dictfetchall()
 
 	def getSubscribers(self):
-		self.cur.execute("SELECT * FROM Subscriber")
-		# raw_subscribers =self. cur.fetchall()
-
-		# subscribers = json.dumps(raw_subscribers)
-		return self.dictfetchall()
+		return self.execute("SELECT * FROM Subscriber")
 
 	def dictfetchall(self):
 		"""Returns all rows from a cursor as a list of dicts"""
