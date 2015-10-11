@@ -5,7 +5,7 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/auth/register.css' %}" />
+    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/main.css' %}" />
     <script src="{% static 'OneADay/js/auth/register.js' %}"></script>
 
     <meta charset="UTF-8">
@@ -30,7 +30,8 @@
         Confirm Password:<br>
         <input type="password" name="passwordCheck">
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit">Register</button>
+    <br>{{ error }}
 </form>
 </body>
 </html>

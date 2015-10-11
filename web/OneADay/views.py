@@ -1,27 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import Http404
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
 from datetime import datetime
+import re
 
 from .models import Subscriber
 
 
 def index(request):
-	return render(request, 'OneADay/index.html', {'subscribers': Subscriber.objects.all()})
+	if not request.user.is_authenticated():
+		return render(request, 'OneADay/auth/login.html', {'error': ""})
+
+	# logout(request)
+	subscriber = Subscriber.objects.get(user_id=request.user.id)
+	interests = subscriber.keywords.all()
+	return render(request, 'OneADay/index.html', {'interests': interests})
 
 
-def select(request):
-	person = Subscriber.objects.get(firstname=request.POST['person'])
-	interests = person.keywords.all()
+def login_user(request):
+	if request.user.is_authenticated():
+		return redirect('web:index')
 
-	return render(request, 'OneADay/interests.html', {'interests': interests})
-
-
-def login(request):
 	if request.method == 'GET':
-		return render(request, 'OneADay/auth/login.html')
+		return render(request, 'OneADay/auth/login.html', {'error': ""})
 	elif request.method != 'POST':
 		raise Http404
 
@@ -30,19 +33,30 @@ def login(request):
 	user = authenticate(username=username, password=password)
 
 	if user is not None:
-		return render(request, 'OneADay/interests.html')
+		login(request, user)
+		return redirect('web:index')
 
+	return render(request, 'OneADay/auth/login.html', {'error': "Incorrect username or password"})
 
+def logout_user(request):
+	logout(request)
+	return redirect('web:index')
 
 def register(request):
 	if request.method == 'GET':
-		return render(request, 'OneADay/auth/register.html')
+		return render(request, 'OneADay/auth/register.html', {'error': ""})
 	elif request.method != 'POST':
 		raise Http404
 
 	username = request.POST['username']
 	email = request.POST['email']
 	password = request.POST['password']
+
+	if User.objects.filter(email=email).count() > 0:
+		return render(request, 'OneADay/auth/register.html', {'error': "That email address is already in use."})
+
+	if User.objects.filter(username=username).count() > 0:
+		return render(request, 'OneADay/auth/register.html', {'error': "That username is already in use."})
 
 	user = User.objects.create_user(username, email, password)
 

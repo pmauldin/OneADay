@@ -5,7 +5,7 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/auth/register.css' %}" />
+    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/main.css' %}" />
     <script src="{% static 'OneADay/js/auth/register.js' %}"></script>
 
     <meta charset="UTF-8">
@@ -23,6 +23,9 @@
         <input type="password" name="password" id="password">
     </div>
     <button type="submit">Submit</button>
+    <br>{{ error }}
 </form>
+
+Don't have an account? Click <a href="{% url 'web:register' %}">here</a> to sign up!
 </body>
 </html>

@@ -1,0 +1,9 @@
+.form-item {
+  padding-bottom: 5px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
