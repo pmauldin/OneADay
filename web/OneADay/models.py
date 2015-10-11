@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+from django.contrib.auth.models import User
 from django.db import models
 
 class Interest(models.Model):
@@ -15,14 +16,12 @@ class Interest(models.Model):
 
 class Subscriber(models.Model):
 	subscriberid = models.AutoField(db_column='SubscriberID', primary_key=True)
-	firstname = models.CharField(db_column='FirstName', max_length=30)
-	lastname = models.CharField(db_column='LastName', max_length=30)
-	email = models.CharField(db_column='Email', unique=True, max_length=255)
+	user = models.ForeignKey(User, null=False)
 	joindate = models.DateTimeField(db_column='JoinDate')
 	keywords = models.ManyToManyField(Interest)
 
 	def __str__(self):
-		return self.firstname + " " + self.lastname
+		return self.user.username
 
 	class Meta:
 		db_table = 'Subscriber'

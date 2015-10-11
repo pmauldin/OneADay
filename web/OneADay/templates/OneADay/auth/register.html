@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/auth/register.css' %}" />
+    <script src="{% static 'OneADay/js/auth/register.js' %}"></script>
+
+    <meta charset="UTF-8">
+    <title>Signup for OneADay!</title>
+</head>
+<body>
+<form id="register" action="{% url 'web:register' %}" method="post">
+    {% csrf_token %}
+    <div class="form-item">
+        Username:<br>
+        <input type="text" name="username">
+    </div>
+    <div class="form-item">
+        Email:<br>
+        <input type="text" name="email">
+    </div>
+    <div class="form-item">
+        Password:<br>
+        <input type="password" name="password" id="password">
+    </div>
+    <div class="form-item">
+        Confirm Password:<br>
+        <input type="password" name="passwordCheck">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
