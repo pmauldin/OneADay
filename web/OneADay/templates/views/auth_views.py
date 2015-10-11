@@ -4,20 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
 from datetime import datetime
-import re
 
-from .models import Subscriber
-
-
-def index(request):
-	if not request.user.is_authenticated():
-		return render(request, 'OneADay/auth/login.html', {'error': ""})
-
-	# logout(request)
-	subscriber = Subscriber.objects.get(user_id=request.user.id)
-	interests = subscriber.keywords.all()
-	return render(request, 'OneADay/index.html', {'interests': interests})
-
+from OneADay.models import Subscriber
 
 def login_user(request):
 	if request.user.is_authenticated():

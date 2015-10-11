@@ -7,3 +7,16 @@
   top: 8px;
   right: 5px;
 }
+
+.interests  {
+  width: 50%;
+}
+
+.interest-header {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.tagit {
+  margin-top: 0;
+}
