@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from django.http import HttpResponse
+from django.db import connection
 
 from OneADay.models import Subscriber, Interest
 
@@ -36,5 +37,8 @@ def remove_interest(request):
 
 	subscriber.keywords.remove(interest)
 	subscriber.save()
+
+	cursor = connection.cursor()
+	cursor.execute("delete from Interest where Keyword not in (select interest_id from Subscriber_keywords)")
 
 	return HttpResponse("Removed")
