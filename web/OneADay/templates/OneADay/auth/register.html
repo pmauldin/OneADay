@@ -2,9 +2,11 @@
 
 {% block includes %}
 {% load staticfiles %}
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/main.css' %}" />
-<link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/form.css' %}" />
-{#<script src="{% static 'OneADay/js/auth/register.js' %}"></script>#}
+<link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/auth.css' %}" />
+<script src="{% static 'OneADay/js/auth/register.js' %}"></script>
 {% endblock %}
 
 {% block title %}Signup for OneADay!{% endblock %}

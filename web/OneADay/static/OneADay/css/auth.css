@@ -46,3 +46,7 @@ body {
 .error {
     color: darkred;
 }
+
+.register-success {
+    font-size: 18px;
+}

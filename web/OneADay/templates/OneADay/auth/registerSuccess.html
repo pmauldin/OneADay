@@ -1,8 +1,17 @@
 {% extends "master.html" %}
 
-{% block content %}
-{% csrf_token %}
-Congratulations, {{ name }}! You've successfully signed up for a OneADay subscription.
+{% block includes %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/main.css' %}" />
+<link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/auth.css' %}" />
+{% endblock %}
 
-<a href="{% url 'web:login' %}">Click here to login</a>
+{% block content %}
+<div class="text-center register-success">
+    <div>
+        Congratulations, {{ name }}! You've successfully signed up for a OneADay subscription.
+    </div>
+    <a href="{% url 'web:login' %}">Click here to login.</a>
+</div>
+
 {% endblock %}

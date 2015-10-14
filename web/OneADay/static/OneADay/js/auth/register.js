@@ -1,14 +1,18 @@
 $(document).ready(function () {
+    jQuery.validator.addMethod("noSpace", function(value, element) {
+        return value.indexOf(" ") < 0 && value != "";
+    }, "Usernames must not contain spaces");
+
     $("#register").validate({
         rules: {
-            username: "required",
-            email: "required",
+            username: {
+                minlength: 3,
+                noSpace: true
+            },
             password: {
-                required: true,
                 minlength: 6
             },
             passwordCheck: {
-                required: true,
                 minlength: 6,
                 equalTo: "#password"
             }

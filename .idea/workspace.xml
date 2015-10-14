@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a5780d5-40c1-4b20-a353-014a1ef95638" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/OneADay/static/OneADay/css/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/OneADay/templates/master.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/OneADay/static/OneADay/css/plugins/jquery.tagit.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/login.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/OneADay/static/OneADay/js/plugins/tag-it.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OneADay/templates/views/account_views.py" afterPath="$PROJECT_DIR$/web/OneADay/templates/views/account_views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OneADay/templates/OneADay/index.html" afterPath="$PROJECT_DIR$/web/OneADay/templates/OneADay/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/OneADay/static/OneADay/css/form.css" afterPath="$PROJECT_DIR$/web/OneADay/static/OneADay/css/auth.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html" afterPath="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/register.html" afterPath="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js" afterPath="$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html" afterPath="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,6 +29,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="auth_views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OneADay/templates/views/auth_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="master.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/OneADay/templates/master.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,18 +52,60 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="25" selection-end-column="14" />
+            <state vertical-scroll-proportion="-12.666667">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registerSuccess.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="11" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06963249">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state vertical-scroll-proportion="2.6666667">
+              <caret line="5" column="97" selection-start-line="5" selection-start-column="97" selection-end-line="5" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/OneADay/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3970588">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OneADay/static/OneADay/css/auth.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -84,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/src/subscribers.py" />
         <option value="$PROJECT_DIR$/web/src/templates/subscribers_interests.html" />
         <option value="$PROJECT_DIR$/web/src/static/stlye.css" />
         <option value="$PROJECT_DIR$/web/src/static/style.css" />
@@ -116,25 +162,26 @@
         <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/register.html" />
         <option value="$PROJECT_DIR$/web/web/urls.py" />
         <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/js/register.js" />
-        <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js" />
         <option value="$PROJECT_DIR$/web/OneADay/models.py" />
         <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/interests.html" />
         <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/css/main.css" />
         <option value="$PROJECT_DIR$/web/OneADay/views.py" />
         <option value="$PROJECT_DIR$/web/OneADay/auth_views.py" />
-        <option value="$PROJECT_DIR$/web/OneADay/templates/views/auth_views.py" />
-        <option value="$PROJECT_DIR$/web/OneADay/urls.py" />
         <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/js/index.js" />
         <option value="$PROJECT_DIR$/web/OneADay/templates/views/account_views.py" />
         <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/master.html" />
         <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/index.html" />
-        <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html" />
         <option value="$PROJECT_DIR$/web/OneADay/templates/master.html" />
         <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/login.js" />
         <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/css/login.css" />
-        <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html" />
-        <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/register.html" />
         <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/css/form.css" />
+        <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/register.html" />
+        <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js" />
+        <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html" />
+        <option value="$PROJECT_DIR$/web/OneADay/static/OneADay/css/auth.css" />
+        <option value="$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html" />
+        <option value="$PROJECT_DIR$/web/OneADay/templates/views/auth_views.py" />
+        <option value="$PROJECT_DIR$/web/OneADay/urls.py" />
       </list>
     </option>
   </component>
@@ -886,6 +933,7 @@
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/peter/OneADay/web/OneADay/templates/OneADay/auth/login.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1469,16 +1517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/OneADay/templates/views/auth_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1504,16 +1542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33272058">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/OneADay/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36397058">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1559,26 +1587,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/OneADay/templates/master.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3333333">
           <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1591,27 +1603,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html">
+    <entry file="file://$PROJECT_DIR$/web/OneADay/static/OneADay/js/auth/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/OneADay/static/OneADay/css/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23161764">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06963249">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state vertical-scroll-proportion="2.6666667">
+          <caret line="5" column="97" selection-start-line="5" selection-start-column="97" selection-end-line="5" selection-end-column="97" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OneADay/static/OneADay/css/auth.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/registerSuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="11" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OneADay/templates/OneADay/auth/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.666667">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OneADay/templates/views/auth_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OneADay/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3970588">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
