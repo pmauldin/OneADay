@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+{% extends "master.html" %}
 
-    {% load staticfiles %}
-    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/main.css' %}" />
-    <script src="{% static 'OneADay/js/auth/register.js' %}"></script>
+{% block includes %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/main.css' %}" />
+<link rel="stylesheet" type="text/scss" href="{% static 'OneADay/css/form.css' %}" />
+{% endblock %}
 
-    <meta charset="UTF-8">
-    <title>Signup for OneADay!</title>
-</head>
-<body>
-<form id="register" action="{% url 'web:login' %}" method="post">
-    {% csrf_token %}
-    <div class="form-item">
-        Username:<br>
-        <input type="text" name="username">
-    </div>
-    <div class="form-item">
-        Password:<br>
-        <input type="password" name="password" id="password">
-    </div>
-    <button type="submit">Login</button>
-    <br>{{ error }}
-</form>
+{% block title %}Login to OneADay!{% endblock %}
 
-Don't have an account? Click <a href="{% url 'web:register' %}">here</a> to sign up!
-</body>
-</html>
+{% block content %}
+<div class="container">
+    <form class="form-signin" id="login" action="{% url 'web:login' %}" method="post">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">Sign in</h2>
+        <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <div class="login-footer">
+            <div class="text-center">
+                <a href="{% url 'web:register' %}">Register for an account!</a>
+            </div>
+            <div class="text-center error">
+                {{ error }}
+            </div>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

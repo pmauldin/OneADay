@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends "master.html" %}
+
+{% block content %}
+{% csrf_token %}
 Congratulations, {{ name }}! You've successfully signed up for a OneADay subscription.
 
 <a href="{% url 'web:login' %}">Click here to login</a>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="{% static 'OneADay/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <link rel="stylesheet" type="text/scss" href="{% static 'OneADay/plugins/bootstrap/css/bootstrap.min.css' %}" />
+
+    {% block includes %}{% endblock %}
+
+    <meta charset="UTF-8">
+    <title>{% block title %}OneADay{% endblock %}</title>
+</head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
