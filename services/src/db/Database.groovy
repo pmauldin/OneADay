@@ -7,10 +7,11 @@ import groovy.sql.Sql
 class Database {
     private def db
     private def sql
+    private def config
 
-    def connect(String username, String host, String database, String password) {
-        db = [url: "jdbc:mysql://$host/$database?useUnicode=true&characterEncoding=UTF-8",
-                  user: username, password: password, driver: 'com.mysql.jdbc.Driver']
+    def connect() {
+        db = [url: "jdbc:mysql://$config.host/$config.database?useUnicode=true&characterEncoding=UTF-8",
+                  user: config.username, password: config.password, driver: 'com.mysql.jdbc.Driver']
 
         sql = Sql.newInstance(db.url, db.user, db.password, db.driver)
     }
@@ -24,5 +25,9 @@ class Database {
         String query = "SELECT * from ${table}"
 
         sql.rows(query);
+    }
+
+    def executeUpdate(String query) {
+        sql.executeUpdate query
     }
 }

@@ -1,0 +1,8 @@
+{
+  "db": {
+	"username": "admin",
+	"host": "159.203.64.72:3306",
+	"database": "one_a_day",
+	"password": "Orangebox1"
+  }
+}

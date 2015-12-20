@@ -1,18 +1,24 @@
+import db.Configuration
 import db.Database
 import interests.Interest
 
 class Main {
     static void main(String[] args) {
-        Database db = new Database()
-        db.connect "admin", "159.203.64.72:3306", "one_a_day", "Orangebox1"
-        def interests = db.getAllRows("Interest")
+        Configuration config = new Configuration()
 
-        interests.each ({ row ->
-            def interest = new Interest(keyword: row.keyword, link: row.link, lastUpdated: row.last_updated)
-            println interest
-//            println interest
-//            println interest.getClass()
-        })
+        Database db = new Database(config: config)
+        db.connect()
+        def interests = []
+
+        db.getAllRows("Interest").each { row ->
+            def interest = new Interest(keyword: row.keyword, link: row.link, lastUpdated: row.last_updated, db: db)
+            interests.add(interest)
+        }
+
+        interests.each { row ->
+            row.updateLink()
+            println row
+        }
 
         db.close()
     }

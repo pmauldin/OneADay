@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="68753d1e-dc12-4846-a3cd-85ba1f3cb278">
+      <user-name>admin</user-name>
+      <user-password>dfe5dfd8dfcbdfc4dfcddfcfdfc8dfc5dfd2df9b</user-password>
+      <schema-pattern>one_a_day.*</schema-pattern>
+      <default-schemas>one_a_day.*</default-schemas>
+    </data-source>
+    <data-source name="Django default2" uuid="4d2e2804-36aa-4109-87a6-b35725a52ae3">
+      <user-name>admin</user-name>
+      <user-password>dfe5dfd8dfcbdfc4dfcddfcfdfc8dfc5dfd2df9b</user-password>
+      <schema-pattern>one_a_day.*</schema-pattern>
+      <default-schemas>one_a_day.*</default-schemas>
+    </data-source>
+  </component>
+</project>
