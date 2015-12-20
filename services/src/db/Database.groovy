@@ -27,6 +27,12 @@ class Database {
         sql.rows(query);
     }
 
+    def getRowsConditional(String table, String condition) {
+        String query = "SELECT * from $table WHERE $condition"
+
+        sql.rows(query);
+    }
+
     def executeUpdate(String query) {
         sql.executeUpdate query
     }

@@ -18,8 +18,8 @@ class Interest {
     }
 
     def updateLink() {
-        if (!keyword || !lastUpdated || lastUpdated - new Date() <= 1) {
-            println "Skipping..."
+        if (!keyword || (lastUpdated && lastUpdated - new Date() <= 1)) {
+            println "Skipping update for $keyword..."
             return
         }
 
@@ -41,6 +41,7 @@ class Interest {
     def updateInterestRow() {
         def query = "UPDATE Interest set link='${link}',last_updated='${lastUpdated}' where keyword='${keyword}'"
         db.executeUpdate(query)
+        println "Updated $keyword"
     }
 
     String toString() {

@@ -2,7 +2,7 @@ import db.Configuration
 import db.Database
 import interests.Interest
 
-class Main {
+class Scraper {
     static void main(String[] args) {
         Configuration config = new Configuration()
 
@@ -17,7 +17,6 @@ class Main {
 
         interests.each { row ->
             row.updateLink()
-            println row
         }
 
         db.close()
