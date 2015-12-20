@@ -1,15 +1,18 @@
 import db.Database
-import subscribers.Subscriber
+import interests.Interest
 
 class Main {
     static void main(String[] args) {
-//        Subscriber subscriber = new Subscriber("Peter", "Mauldin", "petermauldin@utexas.edu")
-
-//        subscriber.printSubscriberInfo()
-
         Database db = new Database()
         db.connect "admin", "159.203.64.72:3306", "one_a_day", "Orangebox1"
-        db.viewSubscribers()
+        def interests = db.getAllRows("Interest")
+
+        interests.each ({ row ->
+            def interest = new Interest(keyword: row.keyword, link: row.link, lastUpdated: row.last_updated)
+            println interest
+//            println interest
+//            println interest.getClass()
+        })
 
         db.close()
     }

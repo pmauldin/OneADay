@@ -20,11 +20,9 @@ class Database {
         println "Database connection terminated"
     }
 
-    def viewSubscribers(){
-        String query = "SELECT * from Subscriber"
+    def getAllRows(String table) {
+        String query = "SELECT * from ${table}"
 
-        sql.eachRow(query, {
-            subscriber -> println subscriber
-        })
+        sql.rows(query);
     }
 }
