@@ -82,7 +82,7 @@ DATABASES = {
         'HOST': '159.203.64.72',
         'PORT': '3306',
         'USER': 'admin',
-        'PASSWORD': 'pu8REmap!$wu3H'
+        'PASSWORD': 'Orangebox1'
     }
 }
 

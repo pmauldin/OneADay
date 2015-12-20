@@ -8,7 +8,7 @@ public class Database {
     public int connect(String name) {
         String username = "admin";
         String hostname = "159.203.64.72:3306";
-        String password = "pu8REmap!$wu3H";
+        String password = "Orangebox1";
 
         try {
             Class.forName ("com.mysql.jdbc.Driver");
