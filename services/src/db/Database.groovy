@@ -23,14 +23,12 @@ class Database {
 
     def getAllRows(String table) {
         String query = "SELECT * from ${table}"
-
-        sql.rows(query);
+        sql.rows(query)
     }
 
     def getRowsConditional(String table, String condition) {
         String query = "SELECT * from $table WHERE $condition"
-
-        sql.rows(query);
+        sql.rows(query)
     }
 
     def executeUpdate(String query) {

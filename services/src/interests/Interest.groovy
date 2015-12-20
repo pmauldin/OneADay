@@ -18,7 +18,7 @@ class Interest {
     }
 
     def updateLink() {
-        if (!keyword || (lastUpdated && lastUpdated - new Date() <= 1)) {
+        if (!keyword) {
             println "Skipping update for $keyword..."
             return
         }

@@ -4,5 +4,9 @@
 	"host": "159.203.64.72:3306",
 	"database": "one_a_day",
 	"password": "Orangebox1"
+  },
+  "sendgrid": {
+	"username": "pmauldin",
+	"password": "Orangebox1"
   }
 }
