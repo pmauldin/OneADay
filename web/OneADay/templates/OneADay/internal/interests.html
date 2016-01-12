@@ -1,0 +1,29 @@
+{% extends "OneADay/internal/internal.html" %}
+
+{% block internal-includes %}
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css">
+
+
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'OneADay/plugins/tagit/jquery.tagit.css' %}" />
+	<script src="{% static 'OneADay/plugins/tagit/tag-it.js' %}"></script>
+	<script src="{% static 'OneADay/js/internal/tagHelper.js' %}"></script>
+{% endblock %}
+
+{%  block internal-content %}
+	{% csrf_token %}
+
+	<div class="interests">
+		<div class="interest-header">
+			Interests:
+		</div>
+		<ul id="interest-tags">
+			<!-- Existing list items will be pre-added to the tags -->
+			{% for interest in interests %}
+				<li>{{ interest.keyword }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

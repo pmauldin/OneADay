@@ -4,7 +4,8 @@ from OneADay.templates.views import auth_views, account_views
 
 
 urlpatterns = [
-	url(r'^$', account_views.index, name='index'),
+	url(r'^$', account_views.interests, name='interests'),
+	url(r'^trending/', account_views.trending, name='trending'),
 	url(r'^register/', auth_views.register, name='register'),
 	url(r'^login/', auth_views.login_user, name='login'),
 	url(r'^logout/', auth_views.logout_user, name='logout'),

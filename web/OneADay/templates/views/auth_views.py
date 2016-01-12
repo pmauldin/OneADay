@@ -7,9 +7,10 @@ from datetime import datetime
 
 from OneADay.models import Subscriber
 
+
 def login_user(request):
 	if request.user.is_authenticated():
-		return redirect('web:index')
+		return redirect('web:interests')
 
 	if request.method == 'GET':
 		return render(request, 'OneADay/auth/login.html', {'error': ""})
@@ -22,13 +23,15 @@ def login_user(request):
 
 	if user is not None:
 		login(request, user)
-		return redirect('web:index')
+		return redirect('web:interests')
 
 	return render(request, 'OneADay/auth/login.html', {'error': "Incorrect username or password"})
 
+
 def logout_user(request):
 	logout(request)
-	return redirect('web:index')
+	return redirect('web:interests')
+
 
 def register(request):
 	if request.method == 'GET':

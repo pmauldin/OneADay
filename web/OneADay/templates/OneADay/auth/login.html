@@ -8,22 +8,20 @@
 {% block title %}Login to OneADay!{% endblock %}
 
 {% block content %}
-<div class="container">
-    <form class="form-signin" id="login" action="{% url 'web:login' %}" method="post">
-        {% csrf_token %}
-        <h2 class="form-signin-heading">Sign in</h2>
-        <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <div class="login-footer">
-            <div class="text-center">
-                <a href="{% url 'web:register' %}">Register for an account!</a>
-            </div>
-            <div class="text-center error">
-                {{ error }}
-            </div>
-        </div>
+<form class="form-signin" id="login" action="{% url 'web:login' %}" method="post">
+	{% csrf_token %}
+	<h2 class="form-signin-heading">Sign in</h2>
+	<input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
+	<input type="password" class="form-control" placeholder="Password" id="password" name="password" required>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+	<div class="login-footer">
+		<div class="text-center">
+			<a href="{% url 'web:register' %}">Register for an account!</a>
+		</div>
+		<div class="text-center error">
+			{{ error }}
+		</div>
+	</div>
 
-    </form>
-</div>
+</form>
 {% endblock %}

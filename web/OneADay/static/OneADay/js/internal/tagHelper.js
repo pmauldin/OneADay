@@ -1,11 +1,13 @@
-var tagsHelper = function () {
-	$("#interest-tags").tagit({
-		removeConfirmation: true,
-		allowSpaces: true,
-		tagLimit: 15,
-		singleField: true,
-		afterTagAdded: function(event, ui) { if(!ui.duringInitialization) return changeInterest('/add-interest/', ui.tagLabel) },
-		afterTagRemoved: function(event, ui) { if(!ui.duringInitialization) return changeInterest('/remove-interest/', ui.tagLabel) }
+var tagHelper = function () {
+	$(document).ready(function() {
+		$("#interest-tags").tagit({
+			removeConfirmation: true,
+			allowSpaces: true,
+			tagLimit: 15,
+			singleField: true,
+			afterTagAdded: function(event, ui) { if(!ui.duringInitialization) return changeInterest('/add-interest/', ui.tagLabel) },
+			afterTagRemoved: function(event, ui) { if(!ui.duringInitialization) return changeInterest('/remove-interest/', ui.tagLabel) }
+		});
 	});
 
 	function changeInterest(url, keyword) {
@@ -54,3 +56,5 @@ var tagsHelper = function () {
 		}
 	});
 };
+
+tagHelper();

@@ -1,0 +1,4 @@
+var interestsPage = function () {
+};
+
+interestsPage();
