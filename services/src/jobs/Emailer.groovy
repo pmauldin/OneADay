@@ -1,3 +1,5 @@
+package jobs
+
 import com.sendgrid.SendGrid
 import db.Configuration
 import db.Database
@@ -25,16 +27,22 @@ class Emailer {
             return
         }
 
-        println subscriber.interests
-
         def html = """<!DOCTYPE html>
                     <html>
                     <body>
                     <h2>Here are the top results for your interests in the last 24 hours:</h2>
                     """
 
+        def content = ""
+
         subscriber.interests.forEach { interest ->
-            html += """<h4 style="margin:0"><a href="$interest.link">$interest.keyword</a></h4><br>"""
+            if (interest.link.length() < 1) {
+                content = "No New Results."
+            } else {
+                content = "<a href=\"$interest.link\">$interest.link</a>"
+            }
+
+            html += """<h4 style="margin:0">$interest.keyword<br>$content</h4><br>"""
         }
 
         SendGrid.Email email = new SendGrid.Email()
@@ -48,5 +56,7 @@ class Emailer {
         email.setHtml(html)
 
         sendgrid.send(email)
+
+        println "Sent email to $subscriber.email"
     }
 }

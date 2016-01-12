@@ -1,7 +1,6 @@
 package interests
 
 @Grab('org.jsoup:jsoup:1.7.1')
-import db.Database
 import groovy.json.StringEscapeUtils
 
 import java.text.SimpleDateFormat
@@ -18,9 +17,19 @@ class Interest {
     }
 
     def updateLink() {
+        def now = new Date()
+
         if (!keyword) {
             println "Skipping update for $keyword..."
             return
+        }
+
+        if (lastUpdated != null) {
+            //in milliseconds
+            def diff = now.getTime() - lastUpdated.getTime();
+
+            def diffSeconds = diff / 1000 % 60;
+            print diffSeconds
         }
 
         def query = seu.escapeJavaScript(keyword).replaceAll(" ", "+") + "&tbas=0&tbm=nws&tbs=qdr:d"
@@ -31,9 +40,9 @@ class Interest {
                 .get().select("h3.r > a").attr("href")
 
         link = html.substring(html.indexOf("=") + 1, html.length())
-        lastUpdated = new Date()
+
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-        lastUpdated = sdf.format lastUpdated
+        lastUpdated = sdf.format now
 
         updateInterestRow()
     }

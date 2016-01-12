@@ -7,28 +7,31 @@
 
 
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'OneADay/css/main.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'OneADay/plugins/tagit/jquery.tagit.css' %}" />
 <script src="{% static 'OneADay/js/index.js' %}"></script>
+<script src="{% static 'OneADay/js/interests/tagsHelper.js' %}"></script>
 <script src="{% static 'OneADay/plugins/tagit/tag-it.js' %}"></script>
 {% endblock %}
 
 {% block content %}
 {% csrf_token %}
-<div class="interests">
-    <div class="interest-header">
-        Interests:
-    </div>
-    <ul id="interest-tags">
-        <!-- Existing list items will be pre-added to the tags -->
-        {% for interest in interests %}
-            <li>{{ interest.keyword }}</li>
-        {% endfor %}
-    </ul>
+<div class="container">
+	<div class="interests">
+		<div class="interest-header">
+			Interests:
+		</div>
+		<ul id="interest-tags">
+			<!-- Existing list items will be pre-added to the tags -->
+			{% for interest in interests %}
+				<li>{{ interest.keyword }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="logout-button">
+		<form action="{% url 'web:logout' %}" method="GET">
+			<button type="submit">Sign out</button>
+		</form>
+	</div>
 </div>
-<div class="logout-button">
-    <form action="{% url 'web:logout' %}" method="GET">
-        <button type="submit">Sign out</button>
-    </form>
-</div>
+
 {% endblock %}

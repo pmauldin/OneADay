@@ -1,3 +1,5 @@
+package jobs
+
 import db.Configuration
 import db.Database
 import interests.Interest
