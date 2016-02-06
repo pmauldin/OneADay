@@ -1,4 +1,0 @@
-var interestsPage = function () {
-};
-
-interestsPage();
