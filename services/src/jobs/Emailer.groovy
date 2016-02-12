@@ -35,6 +35,7 @@ class Emailer {
 
         def content = ""
 
+
         subscriber.interests.forEach { interest ->
             if (interest.link.length() < 1) {
                 content = "No New Results."

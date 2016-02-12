@@ -20,17 +20,17 @@ class Interest {
         def now = new Date()
 
         if (!keyword) {
-            println "Skipping update for $keyword..."
+            println "Skipping update, keyword undefined..."
             return
         }
 
-        if (lastUpdated != null) {
-            //in milliseconds
-            def diff = now.getTime() - lastUpdated.getTime();
-
-            def diffSeconds = diff / 1000 % 60;
-            print diffSeconds
-        }
+//        if (lastUpdated != null) {
+//            //in milliseconds
+//            def diff = now.getTime() - lastUpdated.getTime();
+//
+//            def diffSeconds = diff / 1000 % 60;
+//            print diffSeconds
+//        }
 
         def query = seu.escapeJavaScript(keyword).replaceAll(" ", "+") + "&tbas=0&tbm=nws&tbs=qdr:d"
 
